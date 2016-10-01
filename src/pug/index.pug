@@ -10,10 +10,23 @@ append ConfigBlock
 //- append JavascriptBlock
 
 block ContentBlock
-  header
-    h1
-      | Index Page
+  p
+    | あなたは…
 
-  main
-    p
-      | content
+  div
+    h3
+      | 旅行中です
+
+    button.btn-here
+      | 現在地を取得
+
+  div
+    h3
+      | 旅行先を調べてます
+
+    form.form-search(action=".")
+
+      input(type="text", placeholder="地名", value="神奈川県", disabled)
+
+      button.btn-search(type="submit")
+        | 検索

@@ -7,5 +7,15 @@ export default class Index {
 
   initialize() {
     console.log('index page');
+
+    $('.btn-here').on('click', (evt) => {
+      location.replace('./place/');
+    });
+
+    $('.form-search').on('submit', (evt) => {
+      evt.preventDefault();
+
+      location.replace('./place/');
+    });
   }
 }

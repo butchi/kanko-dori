@@ -198,6 +198,16 @@ var Index = function () {
     key: 'initialize',
     value: function initialize() {
       console.log('index page');
+
+      $('.btn-here').on('click', function (evt) {
+        location.replace('./place/');
+      });
+
+      $('.form-search').on('submit', function (evt) {
+        evt.preventDefault();
+
+        location.replace('./place/');
+      });
     }
   }]);
 
