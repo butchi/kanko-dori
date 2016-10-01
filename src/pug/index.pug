@@ -11,22 +11,7 @@ append ConfigBlock
 
 block ContentBlock
   p
-    | あなたは…
+    | あなたは今どこにいますか？
 
-  div
-    h3
-      | 旅行中です
-
-    button.btn-here
-      | 現在地を取得
-
-  div
-    h3
-      | 旅行先を調べてます
-
-    form.form-search(action=".")
-
-      input(type="text", placeholder="地名", value="神奈川県", disabled)
-
-      button.btn-search(type="submit")
-        | 検索
+  button.btn-here
+    | 現在地を取得
