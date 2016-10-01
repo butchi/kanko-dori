@@ -1,0 +1,40 @@
+// ==========================================================================
+// media-queries
+// ==========================================================================
+
+// basic
+@mixin mq($env) {
+  @if $env == "pc" {
+    @include mq-pc {
+      @content;
+    }
+  } @elseif $env == "sp" {
+    @include mq-sp {
+      @content;
+    }
+  } @else {
+    @include mq-all {
+      @content;
+    }
+  }
+}
+
+@mixin mq-all {
+  html & {
+    @content;
+  }
+}
+
+// for Desktop
+@mixin mq-pc {
+  html.is-pc & {
+    @content;
+  }
+}
+
+// for Smartphone
+@mixin mq-sp {
+  html.is-sp & {
+    @content;
+  }
+}
