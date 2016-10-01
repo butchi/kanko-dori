@@ -1,7 +1,7 @@
 {
-  "name": "butchi-web-starter-kit",
+  "name": "kanko-dori",
   "version": "0.0.0",
-  "description": "description",
+  "description": "ZenHack 2016 fall project",
   "main": "gulpfile.babel.js",
   "engines": {
     "node": ">=6.0.0"
