@@ -4,5 +4,5 @@
 
 // rem hack
 @function px($size) {
-  @return #{$size / 100}rem;
+  @return #{$size / 15}rem;
 }

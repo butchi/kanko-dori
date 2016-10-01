@@ -3,31 +3,28 @@ extends ../_layout/_DefaultLayout
 append ConfigBlock
   - pageId = 'place'
   - rootPath = '..'
+  - title = '鎌倉市のスポット'
 
 //- append StylesheetBlock
 
 //- append JavascriptBlock
 
 block ContentBlock
-  h2
-    | 鎌倉市のスポット
-
   .mdl-grid
-    .mdl-cell.mdl-cell--4-col
-      .spot-list
-        h3
-          | 店舗一覧
+    .spot-list.mdl-cell.mdl-cell--4-col
+      h3
+        | 店舗一覧
 
-        ul
-          li
-            a(href="../spot/?id=1")
-              | 店A
-          li
-            a(href="../spot/?id=2")
-              | 店B
-          li
-            a(href="../spot/?id=3")
-              | 店C
+      ul
+        li
+          a(href="../spot/?id=1")
+            | 店A
+        li
+          a(href="../spot/?id=2")
+            | 店B
+        li
+          a(href="../spot/?id=3")
+            | 店C
 
-    .mdl-cell.mdl-cell--6-col
-      .map
+    .place-map.mdl-cell.mdl-cell--8-col
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52077.95682657781!2d139.50578816181746!3d35.33399242238056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018459b80ac5619%3A0x5700747a399f2502!2z5pel5pysLCDnpZ7lpYjlt53nnIzpjozlgInluII!5e0!3m2!1sja!2sus!4v1475353929840", width="600", height="450", frameborder="0", style="border:0", allowfullscreen)

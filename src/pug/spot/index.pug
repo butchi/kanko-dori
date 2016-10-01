@@ -3,27 +3,71 @@ extends ../_layout/_DefaultLayout
 append ConfigBlock
   - pageId = 'place'
   - rootPath = '..'
+  - title = '鎌倉どんぶりカフェbowls'
 
 //- append StylesheetBlock
 
 //- append JavascriptBlock
 
 block ContentBlock
-  h2
-    | 店A
-
   section.sec-info
-    h3
-      | 店舗情報
+    .mdl-grid
+      .mdl-cell.mdl-cell--5-col
+        .spot-info.mdl-card.mdl-shadow--2dp
+          .mdl-card__title
+            h3.mdl-card__title-text
+              | 店舗情報
+          .info.mdl-card__supporting-text
+            ul.demo-list-icon.mdl-list
+              li.mdl-list__item
+                span.mdl-list__item-primary-content
+                  i.material-icons.mdl-list__item-icon store
+                  | 鎌倉どんぶりカフェbowls
+              li.mdl-list__item
+                span.mdl-list__item-primary-content
+                  i.material-icons.mdl-list__item-icon place
+                  | 〒248-0006 神奈川県鎌倉市小町２−１４−７
+              li.mdl-list__item
+                span.mdl-list__item-primary-content
+                  i.material-icons.mdl-list__item-icon phone
+                  | 467-61-3501
+              li.mdl-list__item
+                span.mdl-list__item-primary-content
+                  i.material-icons.mdl-list__item-icon access_time
+                  | 11時00分～22時00分
 
-    .address
-      | 神奈川県鎌倉市○○
-    .map
+          .map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.395835153666!2d139.5513282144463!3d35.320990757253035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601845c6b2d8c513%3A0x4c380132f20e5f93!2z6Y6M5YCJ44Gp44KT44G244KK44Kr44OV44KnYm93bHM!5e0!3m2!1sja!2sus!4v1475353736977", width="600", height="450", frameborder="0", style="border:0" allowfullscreen)
 
-  section.sec-service
-    h3
-      | サービス一覧
+          .mdl-card__actions.mdl-card--border
+            a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+              | チェックイン
 
-    ul
-      li
-        | お茶500mlプレゼント
+
+          .mdl-card__menu
+            button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
+              i.material-icons share
+
+      section.sec-service.mdl-cell.mdl-cell--7-col
+        h3
+          | サービス一覧
+
+        table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
+          thead
+            tr
+              th.mdl-data-table__cell--non-numeric サービス
+              th チェックイン数
+              th 補足
+          tbody
+            tr
+              td.mdl-data-table__cell--non-numeric コーヒー無料
+              td 〜20
+              td
+            tr
+              td.mdl-data-table__cell--non-numeric ベイクドチーズケーキ割引
+              td 〜10
+              td 200円の特別価格
+            tr
+              td.mdl-data-table__cell--non-numeric ランチセット
+              td 〜5
+              td 300円で召し上がれます
