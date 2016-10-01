@@ -1,0 +1,32 @@
+extends ../_layout/_DefaultLayout
+
+append ConfigBlock
+  - pageId = 'place'
+  - rootPath = '..'
+
+//- append StylesheetBlock
+
+//- append JavascriptBlock
+
+block ContentBlock
+  header
+    h1
+      | 建長商店の地図
+
+  main
+    section.sec-map
+      h3 地図
+      .map
+
+    section.sec-service
+      h3 特典リスト
+      ul
+        li
+          a(href="../spot/?id=1")
+            | 店A
+        li
+          a(href="../spot/?id=2")
+            | 店B
+        li
+          a(href="../spot/?id=3")
+            | 店C
