@@ -20,31 +20,47 @@
     <meta property="twitter:description" content="web-starter web page.">
     <script src="../js/ua-switch.js"></script>
     <!-- stylesheet-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="page-place">
     <div class="wrapper">
-      <header>
-        <h1>建長商店の地図</h1>
-      </header>
-      <main>
-        <section class="sec-map">
-          <h3>地図</h3>
-          <div class="map"></div>
-        </section>
-        <section class="sec-service">
-          <h3>特典リスト</h3>
-          <ul>
-            <li><a href="../spot/?id=1">店A</a></li>
-            <li><a href="../spot/?id=2">店B</a></li>
-            <li><a href="../spot/?id=3">店C</a></li>
-          </ul>
-        </section>
-      </main>
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+              <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp"><i class="material-icons">search</i></label>
+              <div class="mdl-textfield__expandable-holder">
+                <input class="mdl-textfield__input" id="fixed-header-drawer-exp" type="text" name="sample">
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer"><span class="mdl-layout-title">観光ドリ</span>
+          <nav class="mdl-navigation"><a class="mdl-navigation__link" href="../">ホーム</a><a class="mdl-navigation__link" href="../about/">About</a></nav>
+        </div>
+        <main class="mdl-layout__content">
+          <h2>店A</h2>
+          <section class="sec-info">
+            <h3>店舗情報</h3>
+            <div class="address">神奈川県鎌倉市○○</div>
+            <div class="map"></div>
+          </section>
+          <section class="sec-service">
+            <h3>サービス一覧</h3>
+            <ul>
+              <li>お茶500mlプレゼント</li>
+            </ul>
+          </section>
+        </main>
+      </div>
     </div>
     <!-- javascript-->
     <script src="../js/lib/jquery.min.js"></script>
     <script src="../js/lib/lodash.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

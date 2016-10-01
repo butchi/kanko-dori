@@ -64,6 +64,8 @@ html(lang="ja")
 
     // stylesheet
     block StylesheetBlock
+      link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+      link(rel="stylesheet", href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css")
       link(rel="stylesheet", href= rootPath + '/css/style.css')
 
   body(class= 'page-' + pageId)
@@ -71,12 +73,31 @@ html(lang="ja")
     //- include ../_partial/fb-sdk.html
 
     .wrapper
-      block ContentBlock
+      .mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
+        block header
+          header.mdl-layout__header
+            .mdl-layout__header-row
+              .mdl-layout-spacer
+              .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
+                label.mdl-button.mdl-js-button.mdl-button--icon(for='fixed-header-drawer-exp')
+                  i.material-icons search
+                .mdl-textfield__expandable-holder
+                  input#fixed-header-drawer-exp.mdl-textfield__input(type='text', name='sample')
+          .mdl-layout__drawer
+            span.mdl-layout-title
+              | 観光ドリ
+            nav.mdl-navigation
+              a.mdl-navigation__link(href= rootPath + '/') ホーム
+              a.mdl-navigation__link(href= rootPath + '/about/') About
+
+        main.mdl-layout__content
+          block ContentBlock
 
     // javascript
     block JavascriptBlock
       script(src= rootPath + '/js/lib/jquery.min.js')
       script(src= rootPath + '/js/lib/lodash.min.js')
+      script(defer, src="https://code.getmdl.io/1.2.1/material.min.js")
       script(src= rootPath + '/js/script.js')
 
     //- include ../_partial/gplus-platform.html

@@ -9,23 +9,19 @@ append ConfigBlock
 //- append JavascriptBlock
 
 block ContentBlock
-  header
-    h1
-      | Index Page
+  h2
+    | 鎌倉市のスポット
+  .sec-spot-list
+    h3
+      | 店舗一覧
 
-  main
-    section.sec-info
-      h3
-        | 店舗情報
-
-      .address
-        | 神奈川県鎌倉市○○
-      .map
-
-    section.sec-service
-      h3
-        | サービス一覧
-
-      ul
-        li
-          | お茶500mlプレゼント
+    ul
+      li
+        a(href="../spot/?id=1")
+          | 店A
+      li
+        a(href="../spot/?id=2")
+          | 店B
+      li
+        a(href="../spot/?id=3")
+          | 店C
