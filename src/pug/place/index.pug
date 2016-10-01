@@ -16,18 +16,22 @@ block ContentBlock
         | 店舗一覧
 
       ul.mdl-list
-        li.mdl-list__item
-          .material-icons.mdl-badge.mdl-badge--overlap(data-badge="1") person_pin_circle
-          a(href="../spot/?id=1")
-            | 鎌倉どんぶりカフェbowls
-        li.mdl-list__item
-          .material-icons.mdl-badge.mdl-badge--overlap(data-badge="1") person_pin_circle
-          a(href="../spot/?id=1")
-            | 鎌倉どんぶりカフェbowls
-        li.mdl-list__item
-          .material-icons.mdl-badge.mdl-badge--overlap(data-badge="1") person_pin_circle
-          a(href="../spot/?id=1")
-            | 鎌倉どんぶりカフェbowls
+        mixin kkd-item(name, link, count = 0)
+          li.mdl-list__item
+            .material-icons.mdl-badge.mdl-badge--overlap(data-badge= count) person_pin_circle
+            a(href= link)
+              | #{name}
+
+        +kkd-item('山海堂', rootPath + '/spot/?id=1', 1)
+        +kkd-item('モン･ペシェ･ミニョン', rootPath + '/spot/?id=1', 1)
+        +kkd-item('café vivement dimanche', rootPath + '/spot/?id=1', 2)
+        +kkd-item('OXYMORON onari', rootPath + '/spot/?id=1', 8)
+        +kkd-item('イワタコーヒー店', rootPath + '/spot/?id=1', 21)
+        +kkd-item('土屋鞄製造所', rootPath + '/spot/?id=1', 34)
+        +kkd-item('gram', rootPath + '/spot/?id=1', 55)
+        +kkd-item('スワニー', rootPath + '/spot/?id=1', 89)
+        +kkd-item('鎌倉文学館', rootPath + '/spot/?id=1', 144)
+        +kkd-item('湘南ボウル', rootPath + '/spot/?id=1', 233)
 
     .place-map.mdl-cell.mdl-cell--8-col
       iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52077.95682657781!2d139.50578816181746!3d35.33399242238056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018459b80ac5619%3A0x5700747a399f2502!2z5pel5pysLCDnpZ7lpYjlt53nnIzpjozlgInluII!5e0!3m2!1sja!2sus!4v1475353929840", width="600", height="450", frameborder="0", style="border:0", allowfullscreen)
