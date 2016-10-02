@@ -69,6 +69,10 @@ var _Place = require('../page/Place');
 
 var _Place2 = _interopRequireDefault(_Place);
 
+var _Spot = require('../page/Spot');
+
+var _Spot2 = _interopRequireDefault(_Spot);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -94,6 +98,10 @@ var Router = function () {
       if ($body.hasClass('page-place')) {
         this.pagePlace = new _Place2.default();
       }
+
+      if ($body.hasClass('page-spot')) {
+        this.pageSpot = new _Spot2.default();
+      }
     }
   }]);
 
@@ -102,7 +110,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/Common":4,"../page/Home":5,"../page/Place":6,"./ns":3}],3:[function(require,module,exports){
+},{"../page/Common":4,"../page/Home":5,"../page/Place":6,"../page/Spot":7,"./ns":3}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -338,6 +346,42 @@ exports.default = Place;
 },{"../module/ns":3}],7:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ns = require('../module/ns');
+
+var _ns2 = _interopRequireDefault(_ns);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Spot = function () {
+  function Spot() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, Spot);
+
+    this.initialize();
+  }
+
+  _createClass(Spot, [{
+    key: 'initialize',
+    value: function initialize() {}
+  }]);
+
+  return Spot;
+}();
+
+exports.default = Spot;
+
+},{"../module/ns":3}],8:[function(require,module,exports){
+'use strict';
+
 var _ns = require('./module/ns');
 
 var _ns2 = _interopRequireDefault(_ns);
@@ -352,4 +396,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _ns2.default.main = new _Main2.default();
 
-},{"./module/Main":1,"./module/ns":3}]},{},[7]);
+},{"./module/Main":1,"./module/ns":3}]},{},[8]);
