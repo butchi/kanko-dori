@@ -7,7 +7,9 @@ append ConfigBlock
 
 //- append StylesheetBlock
 
-//- append JavascriptBlock
+prepend JavascriptBlock
+  script(src="http://maps.google.com/maps/api/js?key=AIzaSyDYp9wIgodsJPrn4xXcnx1Aavr-UozbHRE")
+  script(src= rootPath + '/js/lib/gmaps.js')
 
 block ContentBlock
   .mdl-grid
@@ -34,4 +36,4 @@ block ContentBlock
         +kkd-item('湘南ボウル', rootPath + '/spot/?id=1', 233)
 
     .place-map.mdl-cell.mdl-cell--8-col
-      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52077.95682657781!2d139.50578816181746!3d35.33399242238056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018459b80ac5619%3A0x5700747a399f2502!2z5pel5pysLCDnpZ7lpYjlt53nnIzpjozlgInluII!5e0!3m2!1sja!2sus!4v1475353929840", width="600", height="450", frameborder="0", style="border:0", allowfullscreen)
+      .gmaps

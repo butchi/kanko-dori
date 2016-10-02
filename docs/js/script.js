@@ -65,6 +65,10 @@ var _Index = require('../page/Index');
 
 var _Index2 = _interopRequireDefault(_Index);
 
+var _Place = require('../page/Place');
+
+var _Place2 = _interopRequireDefault(_Place);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -86,6 +90,10 @@ var Router = function () {
       if ($body.hasClass('page-index')) {
         this.pageIndex = new _Index2.default();
       }
+
+      if ($body.hasClass('page-place')) {
+        this.pagePlace = new _Place2.default();
+      }
     }
   }]);
 
@@ -94,7 +102,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/Common":4,"../page/Index":5,"./ns":3}],3:[function(require,module,exports){
+},{"../page/Common":4,"../page/Index":5,"../page/Place":6,"./ns":3}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -141,6 +149,68 @@ var Common = function () {
       console.log('page common');
 
       this.setEnvClass();
+
+      _ns2.default.spotArr = [{
+        "id": 1,
+        "name": "モン･ペシェ･ミニョン",
+        "address": "神奈川県鎌倉市",
+        "lat": 35.3232961,
+        "lng": 139.5594026
+      }, {
+        "id": 2,
+        "name": "café vivement dimanche",
+        "address": "神奈川県鎌倉市",
+        "lat": 35.3203769,
+        "lng": 139.5490644
+      }, {
+        "id": 3,
+        "name": "OXYMORON onari",
+        "address": "神奈川県鎌倉市",
+        "lat": 35.319927,
+        "lng": 139.5466479
+      }, {
+        "id": 4,
+        "name": "イワタコーヒー店",
+        "address": "神奈川県鎌倉市",
+        "lat": 35.3194993,
+        "lng": 139.5493172
+      }, {
+        "id": 5,
+        "name": "山海堂",
+        "address": "神奈川県鎌倉市長谷4-2-26",
+        "lat": 35.3154356,
+        "lng": 139.5331683
+      }, {
+        "id": 6,
+        "name": "土屋鞄製造所",
+        "address": "神奈川県鎌倉市由比ガ浜1-10-2",
+        "lat": 35.3152136,
+        "lng": 139.5439841
+      }, {
+        "id": 7,
+        "name": "gram",
+        "address": "神奈川県鎌倉市雪ノ下1-5-38",
+        "lat": 35.3226184,
+        "lng": 139.5505283
+      }, {
+        "id": 8,
+        "name": "スワニー",
+        "address": "神奈川県鎌倉市大町1-1-14",
+        "lat": 35.3158025,
+        "lng": 139.5490282
+      }, {
+        "id": 9,
+        "name": "鎌倉文学館",
+        "address": "神奈川県鎌倉市長谷1-5-3",
+        "lat": 35.3155273,
+        "lng": 139.5367069
+      }, {
+        "id": 10,
+        "name": "湘南ボウル",
+        "address": "神奈川県鎌倉市常盤18",
+        "lat": 35.3315255,
+        "lng": 139.5131561
+      }];
     }
   }, {
     key: 'setEnvClass',
@@ -219,6 +289,63 @@ exports.default = Index;
 },{"../module/ns":3}],6:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ns = require('../module/ns');
+
+var _ns2 = _interopRequireDefault(_ns);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Place = function () {
+  function Place() {
+    var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, Place);
+
+    this.initialize();
+  }
+
+  _createClass(Place, [{
+    key: 'initialize',
+    value: function initialize() {
+      this.initMap();
+    }
+  }, {
+    key: 'initMap',
+    value: function initMap() {
+      var _this = this;
+
+      this.map = new GMaps({
+        div: '.gmaps',
+        lat: 35.3190056,
+        lng: 139.5485442
+      });
+
+      _ns2.default.spotArr.forEach(function (spot) {
+        _this.map.addMarker({
+          lat: spot.lat,
+          lng: spot.lng,
+          title: spot.name
+        });
+      });
+    }
+  }]);
+
+  return Place;
+}();
+
+exports.default = Place;
+
+},{"../module/ns":3}],7:[function(require,module,exports){
+'use strict';
+
 var _ns = require('./module/ns');
 
 var _ns2 = _interopRequireDefault(_ns);
@@ -233,4 +360,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _ns2.default.main = new _Main2.default();
 
-},{"./module/Main":1,"./module/ns":3}]},{},[6]);
+},{"./module/Main":1,"./module/ns":3}]},{},[7]);
