@@ -1,7 +1,7 @@
 extends _layout/_DefaultLayout
 
 append ConfigBlock
-  - pageId = 'index'
+  - pageId = 'home'
   - rootPath = '.'
   - title = '観光-dori'
 
@@ -10,8 +10,17 @@ append ConfigBlock
 //- append JavascriptBlock
 
 block ContentBlock
-  p
-    | あなたは今どこを観光していますか？
+  .first-view
+    .site-logo
 
-  button.btn-here
-    | 現在地を取得
+    .card.mdl-card.mdl-shadow--2dp
+      .mdl-card__title
+        h2.mdl-card__title-text
+          | あなたは今どこを観光していますか？
+      .mdl-card__supporting-text
+        | 観光-doriは観光地のすいてる場所を
+        br
+        | お得なチケットとともに紹介します。
+      .mdl-card__actions.mdl-card--border
+        a.btn-here.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+          | 現在地を取得

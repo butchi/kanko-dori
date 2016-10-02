@@ -61,9 +61,9 @@ var _Common = require('../page/Common');
 
 var _Common2 = _interopRequireDefault(_Common);
 
-var _Index = require('../page/Index');
+var _Home = require('../page/Home');
 
-var _Index2 = _interopRequireDefault(_Index);
+var _Home2 = _interopRequireDefault(_Home);
 
 var _Place = require('../page/Place');
 
@@ -87,8 +87,8 @@ var Router = function () {
 
       this.pageCommon = new _Common2.default();
 
-      if ($body.hasClass('page-index')) {
-        this.pageIndex = new _Index2.default();
+      if ($body.hasClass('page-home')) {
+        this.pageHome = new _Home2.default();
       }
 
       if ($body.hasClass('page-place')) {
@@ -102,7 +102,7 @@ var Router = function () {
 
 exports.default = Router;
 
-},{"../page/Common":4,"../page/Index":5,"../page/Place":6,"./ns":3}],3:[function(require,module,exports){
+},{"../page/Common":4,"../page/Home":5,"../page/Place":6,"./ns":3}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -255,36 +255,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Index = function () {
-  function Index() {
+var Home = function () {
+  function Home() {
     var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-    _classCallCheck(this, Index);
+    _classCallCheck(this, Home);
 
     this.initialize();
   }
 
-  _createClass(Index, [{
+  _createClass(Home, [{
     key: 'initialize',
     value: function initialize() {
-      console.log('index page');
-
       $('.btn-here').on('click', function (evt) {
-        location.replace('./place/');
-      });
-
-      $('.form-search').on('submit', function (evt) {
-        evt.preventDefault();
-
         location.replace('./place/');
       });
     }
   }]);
 
-  return Index;
+  return Home;
 }();
 
-exports.default = Index;
+exports.default = Home;
 
 },{"../module/ns":3}],6:[function(require,module,exports){
 'use strict';

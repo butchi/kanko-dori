@@ -21,10 +21,10 @@
     <script src="./js/ua-switch.js"></script>
     <!-- stylesheet-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-red.min.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body class="page-index">
+  <body class="page-home">
     <div class="wrapper">
       <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
         <header class="mdl-layout__header">
@@ -43,8 +43,16 @@
           <nav class="mdl-navigation"><a class="mdl-navigation__link" href="./">ホーム</a><a class="mdl-navigation__link" href="./about/">About</a></nav>
         </div>
         <main class="mdl-layout__content">
-          <p>あなたは今どこを観光していますか？</p>
-          <button class="btn-here">現在地を取得</button>
+          <div class="first-view">
+            <div class="site-logo"></div>
+            <div class="card mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">あなたは今どこを観光していますか？</h2>
+              </div>
+              <div class="mdl-card__supporting-text">観光-doriは観光地のすいてる場所を<br>お得なチケットとともに紹介します。</div>
+              <div class="mdl-card__actions mdl-card--border"><a class="btn-here mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">現在地を取得</a></div>
+            </div>
+          </div>
         </main>
       </div>
     </div>

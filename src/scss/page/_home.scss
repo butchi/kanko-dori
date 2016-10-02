@@ -1,0 +1,26 @@
+.page-home {
+  .first-view {
+    margin-top: 50px;
+
+    .site-logo {
+      position: relative;
+
+      width: 200px;
+      height: 200px;
+
+      margin: 0 auto;
+
+      text-indent: -9999px;
+      background-image: image-url("../img/kanko-dori--logo.svg");
+      background-size: 200px;
+    }
+
+    .card {
+      background-color: #ccf;
+      position: relative;
+
+      margin: 0 auto;
+      margin-top: 0;
+    }
+  }
+}
