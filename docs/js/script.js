@@ -371,7 +371,11 @@ var Spot = function () {
 
   _createClass(Spot, [{
     key: 'initialize',
-    value: function initialize() {}
+    value: function initialize() {
+      $('.button-coupon').on('click', function (evt) {
+        $('.card-qr').addClass('is-show');
+      });
+    }
   }]);
 
   return Spot;

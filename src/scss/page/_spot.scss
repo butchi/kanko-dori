@@ -2,6 +2,37 @@
   .sec-service {
     .table-service {
     }
+
+    .button-coupon {
+      margin-top: 20px;
+    }
+
+    .card-qr {
+      visibility: hidden;
+
+      transition: margin-top 1s ease-out 0s;
+
+      &.is-show {
+        visibility: visible;
+
+        margin-top: 50px;
+      }
+
+      margin: 0 auto;
+      margin-top: 1000px;
+
+      .title {
+        text-align: center;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      .notice {
+        text-align: center;
+      }
+    }
   }
 
   .sec-info {

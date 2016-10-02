@@ -56,5 +56,23 @@ html.is-pc .wrapper {
   width: 100%;
   height: 100%; }
 
+.page-spot .sec-service .button-coupon {
+  margin-top: 20px; }
+
+.page-spot .sec-service .card-qr {
+  visibility: hidden;
+  transition: margin-top 1s ease-out 0s;
+  margin: 0 auto;
+  margin-top: 1000px; }
+  .page-spot .sec-service .card-qr.is-show {
+    visibility: visible;
+    margin-top: 50px; }
+  .page-spot .sec-service .card-qr .title {
+    text-align: center; }
+    .page-spot .sec-service .card-qr .title img {
+      margin: 0 auto; }
+  .page-spot .sec-service .card-qr .notice {
+    text-align: center; }
+
 .page-spot .sec-info .card {
   width: 500px; }

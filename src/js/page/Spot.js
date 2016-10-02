@@ -6,5 +6,8 @@ export default class Spot {
   }
 
   initialize() {
+    $('.button-coupon').on('click', (evt) => {
+      $('.card-qr').addClass('is-show');
+    });
   }
 }
