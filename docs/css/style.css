@@ -56,6 +56,9 @@ html.is-pc .wrapper {
   width: 100%;
   height: 100%; }
 
+.page-spot .sec-service .table-service {
+  margin-top: 50px; }
+
 .page-spot .sec-service .button-coupon {
   margin-top: 20px; }
 

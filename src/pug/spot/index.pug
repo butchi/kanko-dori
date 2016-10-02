@@ -56,7 +56,18 @@ block ContentBlock
         h3
           | サービス一覧
 
-        table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
+        p.description
+          | 現在のチェックインの数に応じて特典が変化します。
+
+        p.checkin-text
+          | 現在 
+          span.count 0
+          |  人がチェックインしています。
+
+          button.button-reload.mdl-button.mdl-js-button.mdl-button--icon.mdl-button--colored
+            i.material-icons autorenew
+
+        table.table-service.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp
           thead
             tr
               th.mdl-data-table__cell--non-numeric サービス
