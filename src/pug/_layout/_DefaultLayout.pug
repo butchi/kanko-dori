@@ -70,7 +70,7 @@ html(lang="ja")
 
   body(class= 'page-' + pageId)
     //- appId指定を忘れないように
-    //- include ../_partial/fb-sdk.html
+    include ../_partial/fb-sdk.html
 
     .wrapper
       .mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
@@ -79,11 +79,13 @@ html(lang="ja")
             .mdl-layout__header-row
               h2.mdl-layout-title= title
               .mdl-layout-spacer
+
               .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
                 label.mdl-button.mdl-js-button.mdl-button--icon(for='fixed-header-drawer-exp')
                   i.material-icons search
                 .mdl-textfield__expandable-holder
                   input#fixed-header-drawer-exp.mdl-textfield__input(type='text', name='sample')
+
           .kkd-drawer.mdl-layout__drawer
             a.site-logo.mdl-layout-title(href= rootPath)
               | 観光-dori
@@ -92,6 +94,18 @@ html(lang="ja")
               a.mdl-navigation__link(href= rootPath + '/place/') 鎌倉市の店舗一覧
               a.mdl-navigation__link(href= rootPath + '/spot/') お店詳細（サンプル）
               a.mdl-navigation__link(href= rootPath + '/about/') About
+            .list-share.mdl-textfield--align-right
+              .item-share.facebook
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+              .item-share.twitter.
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="閑古鳥が鳴いてるお店のクーポンをもらおう！" data-lang="ja">ツイート</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              .item-share.line.
+                <span>
+                <script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+                <script type="text/javascript">
+                new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"閑古鳥が鳴いてるお店のクーポンをもらおう！","withUrl":true});
+                </script>
+                </span>
 
         main.mdl-layout__content
           block ContentBlock

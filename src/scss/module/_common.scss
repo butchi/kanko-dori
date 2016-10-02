@@ -14,34 +14,6 @@
   }
 }
 
-html {
-  font-size: 10px;
-
-  &.is-sp {
-    font-size: 100vw / $wrapper-width--sp * $px-per-rem;
-  }
-
-  &.is-pc {
-    font-size: #{$px-per-rem}px;
-  }
-
-  &.is-tab {
-    font-size: 100vw / $wrapper-width--tab * $px-per-rem;
-  }
-}
-
-body {
-  @include mq-sp {
-    font-size: $base-font-size--sp;
-    line-height: $line-height--sp;
-  }
-  @include mq-pc {
-    font-size: $base-font-size--pc;
-    line-height: $line-height--pc;
-  }
-  font-family: $sans-serif;
-}
-
 main {
   display: block;
 }
@@ -53,4 +25,19 @@ main {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+.list-share {
+  font-size: 0;
+
+  .item-share {
+    display: block;
+
+    margin-top: 10px;
+    padding-left: 20px;
+
+    text-align: left;
+
+    // vertical-align: top;
+  }
 }

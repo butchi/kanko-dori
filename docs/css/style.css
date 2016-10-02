@@ -18,6 +18,33 @@ body {
 main {
   display: block; }
 
+.display-none {
+  display: none; }
+
+html.is-pc .pc-none {
+  display: none; }
+
+html.is-sp .sp-none {
+  display: none; }
+
+main {
+  display: block; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  color: inherit;
+  text-decoration: inherit; }
+
+.list-share {
+  font-size: 0; }
+  .list-share .item-share {
+    display: block;
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left; }
+
 html.is-sp .wrapper {
   overflow: hidden; }
 
