@@ -27,6 +27,14 @@ html.is-pc .wrapper {
   min-width: 80rem;
   overflow: hidden; }
 
+.kkd-drawer .site-logo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  text-indent: -9999px;
+  background-image: url("../img/kanko-dori--logo.svg");
+  background-size: 200px; }
+
 .page-place .gmaps {
   position: relative;
   width: 100%;
