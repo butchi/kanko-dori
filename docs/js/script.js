@@ -380,6 +380,10 @@ var Spot = function () {
         _this.updateService();
       });
 
+      $('.button-share').on('click', function (evt) {
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('閑古鳥が鳴いてるお店のクーポンをもらおう！') + '&url=' + encodeURIComponent('https://butchi.github.io/kanko-dori/'));
+      });
+
       $('.button-coupon').on('click', function (evt) {
         $('.card-qr').addClass('is-show');
       });

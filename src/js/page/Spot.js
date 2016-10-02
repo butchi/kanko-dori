@@ -12,6 +12,10 @@ export default class Spot {
       this.updateService();
     });
 
+    $('.button-share').on('click', (evt) => {
+      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('閑古鳥が鳴いてるお店のクーポンをもらおう！') + '&url=' + encodeURIComponent('https://butchi.github.io/kanko-dori/'));
+    });
+
     $('.button-coupon').on('click', (evt) => {
       $('.card-qr').addClass('is-show');
     });
