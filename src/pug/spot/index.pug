@@ -10,10 +10,9 @@ append ConfigBlock
 //- append JavascriptBlock
 
 block ContentBlock
-  section.sec-info
     .mdl-grid
-      .mdl-cell.mdl-cell--5-col
-        .spot-info.mdl-card.mdl-shadow--2dp
+      .sec-info.mdl-cell.mdl-cell--5-col
+        .mdl-card.mdl-shadow--2dp
           .mdl-card__title
             h3.mdl-card__title-text
               | 店舗情報
@@ -48,7 +47,7 @@ block ContentBlock
             button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
               i.material-icons share
 
-      section.sec-service.mdl-cell.mdl-cell--7-col
+      .sec-service.mdl-cell.mdl-cell--7-col
         h3
           | サービス一覧
 
@@ -57,12 +56,12 @@ block ContentBlock
             tr
               th.mdl-data-table__cell--non-numeric サービス
               th チェックイン数
-              th 補足
+              th.mdl-data-table__cell--non-numeric 補足
           tbody
             tr
               td.mdl-data-table__cell--non-numeric ひのきの棒1割引
               td 〜10
-              td
+              td.mdl-data-table__cell--non-numeric
             tr
               td.mdl-data-table__cell--non-numeric 建長寺拝観料無料チケット
               td 〜5
@@ -70,4 +69,4 @@ block ContentBlock
             tr
               td.mdl-data-table__cell--non-numeric ZenHack無料チケット
               td 〜1
-              td
+              td.mdl-data-table__cell--non-numeric
